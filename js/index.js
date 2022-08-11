@@ -11,3 +11,5 @@ document.getElementById("sneakerDetail").innerHTML = CardHover(cards);
 
 document.getElementById("showInstagramTop").innerHTML = photos(photosInstagram);
 document.getElementById("showInstagramTop").innerHTML = PhotoHover(photosInstagram);
+
+console.log("123");
