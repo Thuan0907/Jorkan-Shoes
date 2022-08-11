@@ -1,0 +1,313 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 20px;
+}
+
+nav .wrapNav {
+  width: 100%;
+}
+
+nav .wrapNav .navLeft__list {
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+nav .wrapNav .navLeft__list--icon a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav .wrapNav .navRight ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .wrapNav .navRight ul li {
+  list-style: none;
+  margin: 0 10px;
+  padding: 15px;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .wrapNav .navRight ul li a {
+  color: black;
+}
+
+#navContent__bg img {
+  position: relative;
+}
+
+#navContent__bg .nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#navContent__bg .nav__list--home {
+  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.photoExample {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sneaker {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sneaker__tilte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.sneaker__tilte--men {
+  margin: 20px;
+}
+
+.sneaker__tilte--women {
+  margin: 20px;
+}
+
+.sneaker__products #sneakerDetail {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.sneaker__products #sneakerDetail > div {
+  width: calc((100% - 30px) / 4);
+  aspect-ratio: 1 / 1;
+}
+
+.sneaker__products #sneakerDetail > div p:hover {
+  color: #ddac55;
+  cursor: pointer;
+}
+
+.sneaker__products #sneakerDetail > div span {
+  color: #ddac55;
+}
+
+.list_image {
+  width: 100%;
+}
+
+.instagram {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.instagram__title {
+  margin-bottom: 10px;
+}
+
+.instagram #showInstagramTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.instagram #showInstagramTop > div {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% / 4);
+  aspect-ratio: 1 / 1;
+}
+
+.instagram #showInstagramTop > div:hover .list_photos {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.instagram #showInstagramTop > div:hover .backdrop {
+  opacity: 1;
+}
+
+.instagram #showInstagramTop > div .backdrop {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.9s ease;
+  transition: opacity 0.9s ease;
+  font-size: 20px;
+}
+
+.instagram #showInstagramTop > div .backdrop .backdropWrap {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+.instagram #showInstagramTop > div .list_photos {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.list_photos {
+  width: 100%;
+}
+
+.information {
+  margin: 50px 0;
+  background-image: url(../img/information.jpg);
+  padding: 124px 0;
+  text-align: center;
+}
+
+.information p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 20px;
+  position: relative;
+}
+
+.information p::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+
+.information span {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+footer .row .footer__left {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+footer .row .footer__left .row .hoverColor:hover {
+  color: #ddac55;
+}
+
+footer .footer__right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .footer__right ul li {
+  list-style: none;
+  margin: 0 5px;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+footer .footer__right ul li::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #ddac55;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+footer .footer__right ul li a {
+  color: black;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: 1;
+}
+
+footer .footer__right ul li:hover {
+  border: 1px solid #ddac55;
+}
+
+footer .footer__right ul li:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+footer .footer__right ul li:hover a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

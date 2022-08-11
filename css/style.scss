@@ -1,0 +1,255 @@
+nav {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  .wrapNav {
+    width: 100%;
+    .navLeft {
+      &__list {
+        font-size: 14px;
+        color: #333;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        &--icon {
+          a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .navRight {
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        li {
+          list-style: none;
+          margin: 0 10px;
+          padding: 15px;
+          border: 1px solid black;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+#navContent {
+  &__bg {
+    img {
+      position: relative;
+    }
+    .nav__list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      &--home {
+        font-size: 50px;
+        display: flex;
+      }
+    }
+  }
+}
+
+.photoExample {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sneaker {
+  text-align: center;
+  margin-top: 20px;
+  &__tilte {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    &--men {
+      margin: 20px;
+    }
+    &--women {
+      margin: 20px;
+    }
+  }
+  &__products {
+    #sneakerDetail {
+      flex-wrap: wrap;
+      display: flex;
+      gap: 10px;
+      & > div {
+        width: calc((100% - 30px) / 4);
+        aspect-ratio: 1 / 1;
+        p {
+          &:hover {
+            color: #ddac55;
+            cursor: pointer;
+          }
+        }
+        span {
+          color: #ddac55;
+        }
+      }
+    }
+  }
+}
+
+.list_image {
+  width: 100%;
+}
+
+.instagram {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  &__title {
+    margin-bottom: 10px;
+  }
+  #showInstagramTop {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      position: relative;
+      overflow: hidden;
+      width: calc(100% / 4);
+      aspect-ratio: 1 / 1;
+      &:hover {
+        & .list_photos {
+          transform: scale(1.1);
+        }
+        & .backdrop {
+          opacity: 1;
+        }
+      }
+      .backdrop {
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.6);
+        inset: 0;
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.9s ease;
+        font-size: 20px;
+        .backdropWrap {
+          transform: translateX(50%);
+          transform: translateY(200%);
+        }
+      }
+
+      .list_photos {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: all 1s ease-in-out;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.list_photos {
+  width: 100%;
+}
+
+.information {
+  margin: 50px 0;
+  background-image: url(../img/information.jpg);
+  padding: 124px 0;
+  text-align: center;
+  p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: white;
+    }
+  }
+  span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+
+footer {
+  text-align: center;
+  .row {
+    align-items: center;
+    height: 100%;
+    .footer__left {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      .row {
+        .hoverColor:hover {
+          color: #ddac55;
+        }
+      }
+    }
+  }
+
+  .footer__right {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        list-style: none;
+        margin: 0 5px;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          background-color: #ddac55;
+          transform: scale(0);
+          transition: transform 0.5s ease-in-out;
+        }
+
+        a {
+          color: black;
+          transition: transform 0.5s;
+          z-index: 1;
+        }
+
+        &:hover {
+          border: 1px solid #ddac55;
+
+          &::after {
+            transform: scale(1);
+          }
+
+          & a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
