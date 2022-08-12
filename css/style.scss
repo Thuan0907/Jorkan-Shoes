@@ -1,15 +1,22 @@
+.containerCustom {
+  padding: 0 60px
+}
+
 nav {
   display: flex;
   text-align: center;
   padding: 20px;
+
   .wrapNav {
     width: 100%;
+
     .navLeft {
       &__list {
         font-size: 14px;
         color: #333;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+
         &--icon {
           a {
             color: black;
@@ -24,6 +31,7 @@ nav {
       ul {
         display: flex;
         justify-content: flex-end;
+
         li {
           list-style: none;
           margin: 0 10px;
@@ -34,6 +42,7 @@ nav {
           display: flex;
           justify-content: center;
           align-items: center;
+
           a {
             color: black;
           }
@@ -48,10 +57,12 @@ nav {
     img {
       position: relative;
     }
+
     .nav__list {
       position: absolute;
       top: 0;
       left: 0;
+
       &--home {
         font-size: 50px;
         display: flex;
@@ -62,23 +73,28 @@ nav {
 
 .carousel {
   position: relative;
+
   .detailPicture {
     position: absolute;
     right: 100px;
     bottom: 300px;
     text-align: center;
+
     .carouselPicture {
       border-radius: 50%;
       overflow: hidden;
     }
+
     p {
       font-size: 50px;
       color: rgb(85, 81, 81);
       z-index: 1;
     }
+
     .collection {
       font-size: 30px;
     }
+
     .shopNow {
       font-weight: bold;
       font-size: 15px;
@@ -88,9 +104,11 @@ nav {
 
 .photoModal {
   margin-top: 20px;
+
   #photoSneaker {
     display: flex;
     gap: 10px;
+
     .wrapPictureModal {
       position: relative;
       width: calc((100% - 10px) / 2);
@@ -101,38 +119,47 @@ nav {
 .sneaker {
   text-align: center;
   margin-top: 20px;
+
   &__tilte {
     display: flex;
     justify-content: center;
     font-weight: bold;
+
     &--men {
       margin: 20px;
     }
+
     &--women {
       margin: 20px;
     }
   }
+
   &__products {
     #sneakerDetail {
       flex-wrap: wrap;
       display: flex;
-      gap: 10px;
-      & > div {
-        width: calc((100% - 30px) / 4);
+      gap: 30px;
+
+      &>div {
+        width: calc((100% - 90px) / 4);
         aspect-ratio: 1 / 1;
         position: relative;
+
         &:hover {
           & .cardHoverIcon {
             & ul {
               li {
                 transform: translateY(0);
                 opacity: 1;
+
                 &:nth-child(1) {
                   transition-delay: 0.1s;
                 }
+
                 &:nth-child(2) {
                   transition-delay: 0.2s;
                 }
+
                 &:nth-child(3) {
                   transition-delay: 0.3s;
                 }
@@ -140,23 +167,28 @@ nav {
             }
           }
         }
+
         p {
           &:hover {
             color: #ddac55;
             cursor: pointer;
           }
         }
+
         span {
           color: #ddac55;
         }
+
         .cardHoverIcon {
           position: absolute;
           bottom: 90px;
           transform: translateX(-50%);
           left: 50%;
+
           ul {
             display: flex;
             margin: 0;
+
             li {
               background-color: #fff;
               box-shadow: 0 3px 10px #00000014;
@@ -172,6 +204,7 @@ nav {
               transition: all 0.5s;
               transform: translateY(30px);
               opacity: 0;
+
               &:hover {
                 background-color: #ddac55;
                 color: #fff;
@@ -193,25 +226,31 @@ nav {
   margin-top: 20px;
   font-weight: bold;
   font-size: 30px;
+
   &__title {
     margin-bottom: 10px;
   }
+
   #showInstagramTop {
     display: flex;
     flex-wrap: wrap;
-    & > div {
+
+    &>div {
       position: relative;
       overflow: hidden;
       width: calc(100% / 4);
       aspect-ratio: 1 / 1;
+
       &:hover {
         & .list_photos {
           transform: scale(1.1);
         }
+
         & .backdrop {
           opacity: 1;
         }
       }
+
       .backdrop {
         position: absolute;
         z-index: 2;
@@ -221,6 +260,7 @@ nav {
         opacity: 0;
         transition: opacity 0.9s ease;
         font-size: 20px;
+
         .backdropWrap {
           transform: translateX(50%);
           transform: translateY(200%);
@@ -248,12 +288,14 @@ nav {
   padding: 90px 0;
   text-align: center;
   background-size: cover;
+
   p {
     color: white;
     text-transform: uppercase;
     font-size: 20px;
     margin: 20px;
     position: relative;
+
     &::after {
       content: "";
       width: 10px;
@@ -264,13 +306,16 @@ nav {
       color: white;
     }
   }
+
   span {
     color: white;
     text-transform: uppercase;
     font-size: 12px;
   }
+
   .inputEmail {
     margin-top: 20px;
+
     // position: relative;
     input {
       background-color: transparent;
@@ -279,6 +324,7 @@ nav {
       border: none;
       outline: none;
     }
+
     button {
       // position: absolute;
       background-color: transparent;
@@ -286,6 +332,7 @@ nav {
       font-size: 15px;
       font-weight: bold;
       letter-spacing: 3px;
+
       &:hover {
         color: #ddac55;
       }
@@ -295,13 +342,16 @@ nav {
 
 footer {
   text-align: center;
+
   .row {
     align-items: center;
     height: 100%;
+
     .footer__left {
       font-weight: bold;
       text-transform: uppercase;
       font-size: 12px;
+
       .row {
         .hoverColor:hover {
           color: #ddac55;
