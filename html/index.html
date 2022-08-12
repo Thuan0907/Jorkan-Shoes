@@ -187,23 +187,41 @@
     <!-- carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
       <div class="carousel-indicators">
+        
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../img/background.jpg" class="d-block w-100" alt="...">
+          <img src="../img/background.jpg" class="d-block w-100" alt="backgroundMen">
+          <div class="detailPicture">
+            <div class="carouselPicture">
+              <img src="../img/menRight.jpg" alt="">
+            </div>
+            <p>SNEAKER MEN</p>
+            <p class="collection">Collection</p>
+            <br>
+            <span class="shopNow">SHOP NOW</span>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="../img/background2.jpg" class="d-block w-100" alt="...">
+          <img src="../img/background2.jpg" class="d-block w-100" alt="backgroundWomen">
+          <div class="detailPicture">
+            <div class="carouselPicture">
+              <img src="../img/womenRight.jpg" alt="">
+            </div>
+            <p>SNEAKER WOMEN</p>
+            <p class="collection">Collection</p>
+            <br>
+            <span class="shopNow">SHOP NOW</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- photo example -->
-    <section class="photoExample">
-      <img src="../img/photoexample.jpg" alt="photoexample">
-      <img src="../img/photoexample2.jpg" alt="photoexample2">
+    <section class="photoModal container">
+      <div id="photoSneaker"></div>
     </section>
 
     <!-- sneaker -->
@@ -228,6 +246,10 @@
     <img src="../img/inforicon.jpg" alt="">
     <p>sign up for newsletter</p>
     <span>to receive updates</span>
+    <div class="inputEmail">
+      <input type="text" placeholder="Enter your email...">
+      <button>SUBSCRIBE <i class="fa-solid fa-angle-right"></i></button>
+    </div>
   </section>
 
   <!-- footer -->

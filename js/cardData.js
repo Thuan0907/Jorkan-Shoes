@@ -44,6 +44,15 @@ export const cards = [
   },
 ];
 
+export const photoModal = [
+  {
+    images: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/banner-v1-1.jpg?v=1569985843",
+  },
+  {
+    images: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/banner-v1-2.jpg?v=1569985750",
+  },
+];
+
 export const photosInstagram = [
   {
     images:

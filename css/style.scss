@@ -60,9 +60,42 @@ nav {
   }
 }
 
-.photoExample {
+.carousel {
+  position: relative;
+  .detailPicture {
+    position: absolute;
+    right: 100px;
+    bottom: 300px;
+    text-align: center;
+    .carouselPicture {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    p {
+      font-size: 50px;
+      color: rgb(85, 81, 81);
+      z-index: 1;
+    }
+    .collection {
+      font-size: 30px;
+    }
+    .shopNow {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+}
+
+.photoModal {
   margin-top: 20px;
-  text-align: center;
+  #photoSneaker {
+    display: flex;
+    gap: 10px;
+    .wrapPictureModal {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+    }
+  }
 }
 
 .sneaker {
@@ -87,6 +120,26 @@ nav {
       & > div {
         width: calc((100% - 30px) / 4);
         aspect-ratio: 1 / 1;
+        position: relative;
+        &:hover {
+          & .cardHoverIcon {
+            & ul {
+              li {
+                transform: translateY(0);
+                opacity: 1;
+                &:nth-child(1) {
+                  transition-delay: 0.1s;
+                }
+                &:nth-child(2) {
+                  transition-delay: 0.2s;
+                }
+                &:nth-child(3) {
+                  transition-delay: 0.3s;
+                }
+              }
+            }
+          }
+        }
         p {
           &:hover {
             color: #ddac55;
@@ -95,6 +148,36 @@ nav {
         }
         span {
           color: #ddac55;
+        }
+        .cardHoverIcon {
+          position: absolute;
+          bottom: 90px;
+          transform: translateX(-50%);
+          left: 50%;
+          ul {
+            display: flex;
+            margin: 0;
+            li {
+              background-color: #fff;
+              box-shadow: 0 3px 10px #00000014;
+              list-style: none;
+              border-radius: 50px;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              z-index: 2;
+              justify-content: center;
+              align-items: center;
+              margin: 0 10px;
+              transition: all 0.5s;
+              transform: translateY(30px);
+              opacity: 0;
+              &:hover {
+                background-color: #ddac55;
+                color: #fff;
+              }
+            }
+          }
         }
       }
     }
@@ -162,8 +245,9 @@ nav {
 .information {
   margin: 50px 0;
   background-image: url(../img/information.jpg);
-  padding: 124px 0;
+  padding: 90px 0;
   text-align: center;
+  background-size: cover;
   p {
     color: white;
     text-transform: uppercase;
@@ -176,7 +260,7 @@ nav {
       height: 1px;
       position: absolute;
       bottom: 0;
-      left: 0;
+      right: 0;
       color: white;
     }
   }
@@ -184,6 +268,28 @@ nav {
     color: white;
     text-transform: uppercase;
     font-size: 12px;
+  }
+  .inputEmail {
+    margin-top: 20px;
+    // position: relative;
+    input {
+      background-color: transparent;
+      color: #fff;
+      margin-right: 50px;
+      border: none;
+      outline: none;
+    }
+    button {
+      // position: absolute;
+      background-color: transparent;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      &:hover {
+        color: #ddac55;
+      }
+    }
   }
 }
 
