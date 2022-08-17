@@ -1,15 +1,14 @@
 .containerCustom {
-  padding: 0 60px
+  max-width: 1430px;
+  margin: 0 auto;
 }
 
 nav {
   display: flex;
   text-align: center;
   padding: 20px;
-
   .wrapNav {
     width: 100%;
-
     .navLeft {
       &__list {
         font-size: 14px;
@@ -31,6 +30,7 @@ nav {
       ul {
         display: flex;
         justify-content: flex-end;
+        margin-bottom: 0;
 
         li {
           list-style: none;
@@ -53,19 +53,70 @@ nav {
 }
 
 #navContent {
-  &__bg {
-    img {
-      position: relative;
-    }
-
+  .navContent__bg {
+    padding: 0;
+    position: relative;
     .nav__list {
       position: absolute;
-      top: 0;
-      left: 0;
-
+      top: 80px;
+      left: 120px;
       &--home {
-        font-size: 50px;
-        display: flex;
+        .text {
+          margin: 20px 0;
+          font-size: 30px;
+        }
+        #btnHome {
+          position: absolute;
+          top: 30px;
+          left: 650px;
+        }
+        #home {
+          .card-body {
+            ul {
+              list-style: none;
+              padding: 0;
+              li {
+                a {
+                  color: rgb(0, 0, 0);
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--shop {
+        .text {
+          margin: 20px 0;
+          font-size: 30px;
+        }
+        #btnShop {
+          position: absolute;
+          top: 100px;
+          left: 650px;
+        }
+      }
+      &--pages {
+        .text {
+          margin: 20px 0;
+          font-size: 30px;
+        }
+        #btnPages {
+          position: absolute;
+          top: 170px;
+          left: 650px;
+        }
+      }
+      &--blog {
+        .text {
+          margin: 20px 0;
+          font-size: 30px;
+        }
+        #btnBlog {
+          position: absolute;
+          top: 240px;
+          left: 650px;
+        }
       }
     }
   }
@@ -77,7 +128,7 @@ nav {
   .detailPicture {
     position: absolute;
     right: 100px;
-    bottom: 300px;
+    bottom: 200px;
     text-align: center;
 
     .carouselPicture {
@@ -107,11 +158,31 @@ nav {
 
   #photoSneaker {
     display: flex;
-    gap: 10px;
+    gap: 30px;
 
-    .wrapPictureModal {
+    .photoSneaker {
+      overflow: hidden;
       position: relative;
-      width: calc((100% - 10px) / 2);
+      img {
+        width: 100%;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .contentDetail {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        z-index: 2;
+        .sneaker {
+          font-size: 30px;
+        }
+        .shopNow {
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
@@ -120,27 +191,26 @@ nav {
   text-align: center;
   margin-top: 20px;
 
-  &__tilte {
+  &__title {
     display: flex;
     justify-content: center;
     font-weight: bold;
-
     &--men {
-      margin: 20px;
+      margin-right: 20px;
     }
-
     &--women {
-      margin: 20px;
+      margin-left: 20px;
     }
   }
 
   &__products {
+    margin-top: 20px;
     #sneakerDetail {
       flex-wrap: wrap;
       display: flex;
       gap: 30px;
 
-      &>div {
+      & > div {
         width: calc((100% - 90px) / 4);
         aspect-ratio: 1 / 1;
         position: relative;
@@ -235,7 +305,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
 
-    &>div {
+    & > div {
       position: relative;
       overflow: hidden;
       width: calc(100% / 4);
@@ -408,4 +478,7 @@ footer {
       }
     }
   }
+}
+
+@media screen and (max-width: 375px) {
 }

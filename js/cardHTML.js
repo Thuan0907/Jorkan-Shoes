@@ -45,18 +45,6 @@ export function photos(props) {
   return content;
 }
 
-export function pictureModel(props) {
-  let content = "";
-  props.map((item, index) => {
-    return (content += `
-    <div class = "wrapPictureModal" key=${index}>
-      <img  class="pictureModdal"src=${item.images}/>
-    </div>
-    `);
-  });
-  return content;
-}
-
 export function PhotoHover(props) {
   let content = "";
   props.map((item, index) => {
