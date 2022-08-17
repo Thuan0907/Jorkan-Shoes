@@ -6,8 +6,12 @@ import { photos } from "./cardHTML.js";
 import { photosInstagram } from "./cardData.js";
 import { PhotoHover } from "./cardHTML.js";
 
-document.getElementById("sneakerDetail").innerHTML = Card(cards);
-document.getElementById("sneakerDetail").innerHTML = CardHover(cards);
+function getId(id) {
+  return document.getElementById(id);
+}
+getId("sneakerDetail").innerHTML = Card(cards);
+getId("sneakerDetail").innerHTML = CardHover(cards);
 
-document.getElementById("showInstagramTop").innerHTML = photos(photosInstagram);
-document.getElementById("showInstagramTop").innerHTML = PhotoHover(photosInstagram);
+getId("showInstagramTop").innerHTML = photos(photosInstagram);
+getId("showInstagramTop").innerHTML = PhotoHover(photosInstagram);
+

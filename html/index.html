@@ -41,7 +41,7 @@
   </head>
   <body>
     <!-- nav -->
-    <nav class="container">
+    <nav class="containerCustom">
         <div class="row wrapNav">
             <div class="col-4 center navLeft">
                 <div class="navLeft__list">
@@ -68,16 +68,43 @@
     
     <!-- nav content -->
     <div id="navContent">
-      <div class="card card-body navContent__bg">
-        <img src="../img/bg-menu.jpg" alt="">
+      <!-- <div class="card card-body navContent__bg"> -->
+        <!-- <img src="../img/bg-menu.jpg" alt=""> -->
        
         <div class="nav__list">
-          <button>x</button>
-            <div class="nav__list--home">
+          <button class="closeBtn" onclick="closePanel()">x</button>
+
+          <div class="nav__list--content">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  HOME
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                <ul>
+                  <li>Home 1</li>
+                  <li>Home 2</li>
+                  <li>Home 3</li>
+                  <li>Home 4</li>
+                  <li>Home 5</li>
+                </ul>
+                </div>
+              </div>
+              </div>
+            </div>
+            
+          </div>
+
+
+
+            <!-- <div class="nav__list--home">
              <div class="text">HOME</div>
-             <button id="btnHome" data-bs-toggle="collapse" href="#home"><i class="fa-solid fa-angle-right"></i></button>
+             <button id="btnHome" data-bs-toggle="collapse" href="#home"><i class="fa-solid fa-angle-right"></i></button> -->
               <!-- collapse -->
-              <div class="collapse" id="home">
+              <!-- <div class="collapse" id="home">
                 <div class="card card-body">
                   <ul>
                     <li> <a href="">Home 1</a></li>
@@ -91,9 +118,9 @@
             </div>
             <div class="nav__list--shop">
               <div class="text">SHOP</div>
-              <button id="btnShop" data-bs-toggle="collapse" href="#shop"><i class="fa-solid fa-angle-right"></i></i></button>
+              <button id="btnShop" data-bs-toggle="collapse" href="#shop"><i class="fa-solid fa-angle-right"></i></i></button> -->
               <!-- collapse -->
-              <div class="collapse" id="shop">
+              <!-- <div class="collapse" id="shop">
                 <div class="card card-body">
                   <div class="wrapShopLayouts">
                     <h6>SHOP LAYOUTS</h6>
@@ -132,9 +159,9 @@
             </div>
            <div class="nav__list--pages">
               <div class="text">PAGES</div>
-              <button id="btnPages" data-bs-toggle="collapse" href="#page"><i class="fa-solid fa-angle-right"></i></button>
+              <button id="btnPages" data-bs-toggle="collapse" href="#page"><i class="fa-solid fa-angle-right"></i></button> -->
                <!-- collapse -->
-               <div class="collapse" id="page">
+               <!-- <div class="collapse" id="page">
                 <div class="card card-body">
                   <div class="wrapPage">
                     <h6>PRE-BUILT PAGES</h6>
@@ -155,12 +182,12 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="nav__list--blog">
+            </div> -->
+            <!-- <div class="nav__list--blog">
               <div class="text">BLOG</div>
-              <button id="btnBlog" data-bs-toggle="collapse" href="#blog"><i class="fa-solid fa-angle-right"></i></button>
+              <button id="btnBlog" data-bs-toggle="collapse" href="#blog"><i class="fa-solid fa-angle-right"></i></button> -->
               <!-- collapse -->
-              <div class="collapse" id="blog">
+              <!-- <div class="collapse" id="blog">
                 <div class="card card-body">
                   <div class="wrapBlog">
                     <h6>LAYOUTS</h6>
@@ -179,8 +206,9 @@
                 </div>
               </div>
             </div>
+          </div> -->
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
 
@@ -304,8 +332,9 @@
 
     <script type="module" src="../js/card.js"></script>
     <script type="module" src="../js/const.js"></script>
-    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="./../js/index.js"></script>
     
+    <script src="./../js/main.js"></script>
     
   </body>
 </html>

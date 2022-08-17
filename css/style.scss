@@ -7,9 +7,15 @@ nav {
   display: flex;
   text-align: center;
   padding: 20px;
+
   .wrapNav {
     width: 100%;
+
     .navLeft {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
       &__list {
         font-size: 14px;
         color: #333;
@@ -18,6 +24,7 @@ nav {
 
         &--icon {
           a {
+            cursor: pointer;
             color: black;
             text-decoration: none;
             font-size: 20px;
@@ -27,6 +34,8 @@ nav {
     }
 
     .navRight {
+      padding: 0;
+
       ul {
         display: flex;
         justify-content: flex-end;
@@ -34,8 +43,7 @@ nav {
 
         li {
           list-style: none;
-          margin: 0 10px;
-          padding: 15px;
+          margin-left: 10px;
           border: 1px solid black;
           width: 50px;
           height: 50px;
@@ -49,77 +57,154 @@ nav {
         }
       }
     }
+
+    .navCenter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & a img {
+        height: 20px;
+      }
+    }
   }
 }
 
 #navContent {
-  .navContent__bg {
-    padding: 0;
-    position: relative;
-    .nav__list {
-      position: absolute;
-      top: 80px;
-      left: 120px;
-      &--home {
-        .text {
-          margin: 20px 0;
-          font-size: 30px;
-        }
-        #btnHome {
-          position: absolute;
-          top: 30px;
-          left: 650px;
-        }
-        #home {
-          .card-body {
-            ul {
-              list-style: none;
-              padding: 0;
-              li {
-                a {
-                  color: rgb(0, 0, 0);
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-        }
-      }
-      &--shop {
-        .text {
-          margin: 20px 0;
-          font-size: 30px;
-        }
-        #btnShop {
-          position: absolute;
-          top: 100px;
-          left: 650px;
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  z-index: 1;
+  transform: translateY(-100%);
+  transition: all 1s cubic-bezier(0.1, 1, 0.4, 1);
+  overflow: hidden;
+  background-image: url(./../img/bg-menu.jpg);
+  background-size: cover;
+  background-position: center;
+  &.active {
+    transform: translateY(0);
+  }
+  & .nav__list{
+    padding:80px 50px 80px 120px;
+    & .closeBtn{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      margin-bottom:45px ;
+    }
+  &--content{
+    width: 40%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 200px)!important;
+    & .accordion-item{
+      border: none !important;
+      outline: none !important;
+      background-color: transparent;
+      
+      & .accordion-button{
+        background-color: transparent;
+        box-shadow: none;
+        &:focus{
+          box-shadow: none;
         }
       }
-      &--pages {
-        .text {
-          margin: 20px 0;
-          font-size: 30px;
-        }
-        #btnPages {
-          position: absolute;
-          top: 170px;
-          left: 650px;
-        }
-      }
-      &--blog {
-        .text {
-          margin: 20px 0;
-          font-size: 30px;
-        }
-        #btnBlog {
-          position: absolute;
-          top: 240px;
-          left: 650px;
+      & .accordion-body{
+        ul{
+          list-style: none;
+          margin:0;
+          padding:0;
         }
       }
     }
   }
+  }
+  // & img{
+  //   display: block;
+  //   // position: absolute;
+  //   // inset:0;
+  //   object-fit: cover;
+  // }
+
+  // .navContent__bg {
+  //   padding: 0;
+  //   position: relative;
+
+
+    // .nav__list {
+    //   position: absolute;
+    //   top: 80px;
+    //   left: 120px;
+
+    //   &--home {
+    //     .text {
+    //       margin: 20px 0;
+    //       font-size: 30px;
+    //     }
+
+    //     #btnHome {
+    //       position: absolute;
+    //       top: 30px;
+    //       left: 650px;
+    //     }
+
+    //     #home {
+    //       .card-body {
+    //         ul {
+    //           list-style: none;
+    //           padding: 0;
+
+    //           li {
+    //             a {
+    //               color: rgb(0, 0, 0);
+    //               text-decoration: none;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+
+    //   &--shop {
+    //     .text {
+    //       margin: 20px 0;
+    //       font-size: 30px;
+    //     }
+
+    //     #btnShop {
+    //       position: absolute;
+    //       top: 100px;
+    //       left: 650px;
+    //     }
+    //   }
+
+    //   &--pages {
+    //     .text {
+    //       margin: 20px 0;
+    //       font-size: 30px;
+    //     }
+
+    //     #btnPages {
+    //       position: absolute;
+    //       top: 170px;
+    //       left: 650px;
+    //     }
+    //   }
+
+    //   &--blog {
+    //     .text {
+    //       margin: 20px 0;
+    //       font-size: 30px;
+    //     }
+
+    //     #btnBlog {
+    //       position: absolute;
+    //       top: 240px;
+    //       left: 650px;
+    //     }
+    //   }
+    // }
+  // }
 }
 
 .carousel {
@@ -163,21 +248,26 @@ nav {
     .photoSneaker {
       overflow: hidden;
       position: relative;
+
       img {
         width: 100%;
         transition: all 0.5s;
+
         &:hover {
           transform: scale(1.05);
         }
       }
+
       .contentDetail {
         position: absolute;
         top: 100px;
         right: 50px;
         z-index: 2;
+
         .sneaker {
           font-size: 30px;
         }
+
         .shopNow {
           font-size: 10px;
           font-weight: bold;
@@ -195,9 +285,11 @@ nav {
     display: flex;
     justify-content: center;
     font-weight: bold;
+
     &--men {
       margin-right: 20px;
     }
+
     &--women {
       margin-left: 20px;
     }
@@ -205,12 +297,13 @@ nav {
 
   &__products {
     margin-top: 20px;
+
     #sneakerDetail {
       flex-wrap: wrap;
       display: flex;
       gap: 30px;
 
-      & > div {
+      &>div {
         width: calc((100% - 90px) / 4);
         aspect-ratio: 1 / 1;
         position: relative;
@@ -305,7 +398,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
 
-    & > div {
+    &>div {
       position: relative;
       overflow: hidden;
       width: calc(100% / 4);
@@ -480,5 +573,4 @@ footer {
   }
 }
 
-@media screen and (max-width: 375px) {
-}
+@media screen and (max-width: 375px) {}
