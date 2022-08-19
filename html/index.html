@@ -57,9 +57,11 @@
             </div>
             <div class="col-4 navRight">
               <ul>
-                <li> <a href=""><i class="fa-solid fa-magnifying-glass"></i> </a> </li>
-                <li> <a href=""><i class="fa-regular fa-user"></i></a> </li>
-                <li> <a href=""><i class="fa-solid fa-bag-shopping"></i></a> </li>
+                <li class="navRightLarge"> <a href=""><i class="fa-solid fa-magnifying-glass"></i> </a> </li>
+                <li class="navRightLarge"> <a href=""><i class="fa-regular fa-user"></i></a> </li>
+                <li class="navRightLarge"> <a href=""><i class="fa-solid fa-bag-shopping"></i></a> </li>
+                <li class="navRightSmall"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> </li>
+                <li class="navRightSmall"> <a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
               </ul>
             </div>
         </div>
@@ -68,147 +70,137 @@
     
     <!-- nav content -->
     <div id="navContent">
-      <!-- <div class="card card-body navContent__bg"> -->
-        <!-- <img src="../img/bg-menu.jpg" alt=""> -->
        
         <div class="nav__list">
           <button class="closeBtn" onclick="closePanel()">x</button>
 
           <div class="nav__list--content">
-          <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                  HOME
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                <div class="accordion-body">
-                <ul>
-                  <li>Home 1</li>
-                  <li>Home 2</li>
-                  <li>Home 3</li>
-                  <li>Home 4</li>
-                  <li>Home 5</li>
-                </ul>
-                </div>
-              </div>
-              </div>
-            </div>
-            
-          </div>
-
-
-
-            <!-- <div class="nav__list--home">
-             <div class="text">HOME</div>
-             <button id="btnHome" data-bs-toggle="collapse" href="#home"><i class="fa-solid fa-angle-right"></i></button> -->
-              <!-- collapse -->
-              <!-- <div class="collapse" id="home">
-                <div class="card card-body">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <!-- home -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="openHome">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home" aria-expanded="false" aria-controls="home">
+                    HOME
+                  </button>
+                </h2>
+                <div id="home" class="accordion-collapse collapse" aria-labelledby="openHome">
+                  <div class="accordion-body">
                   <ul>
-                    <li> <a href="">Home 1</a></li>
-                    <li> <a href="">Home 2</a></li>
-                    <li> <a href="">Home 3</a></li>
-                    <li> <a href="">Home 4</a></li>
-                    <li> <a href="">Home 5</a></li>
+                    <li>Home 1</li>
+                    <li>Home 2</li>
+                    <li>Home 3</li>
+                    <li>Home 4</li>
+                    <li>Home 5</li>
                   </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- shop -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="openShop">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                    SHOP
+                  </button>
+                </h2>
+                <div id="shop" class="accordion-collapse collapse" aria-labelledby="openShop">
+                  <div class="accordion-body">
+                    <div class="wrapShopLayouts">
+                      <h6>SHOP LAYOUTS</h6>
+                      <p>Pagination</p>
+                      <p>List View</p>
+                      <p>FullWidth Layout</p>
+                      <p>Sidebar Layout</p>
+                    </div>
+                    <div class="wrapFilterLayouts">
+                      <h6>FILTER LAYOUTS</h6>
+                      <p>Top Filter</p>
+                      <p>Drawer Filter</p>
+                      <p>Off Canvas Filter</p>
+                    </div>
+                    <div class="wrapProductLayouts">
+                      <h6>PRODUCT LAYOUT</h6>
+                      <p>Vertical Thumbnails</p>
+                      <p>Sticky Details</p>
+                      <p>Gallery Basic</p>
+                      <p>Slider Large</p>
+                    </div>
+                    <div class="wrapProductLayoutsTypes">
+                      <h6>PRODUCT TYPES</h6>
+                      <p>Simple</p>
+                      <p>Out of stock</p>
+                      <p>Variable Color</p>
+                      <p>External/Affiliate</p>
+                    </div>
+                    <div class="wrapProductExtends">
+                      <h6>PRODUCT EXTENDS</h6>
+                      <p>360 Degree</p>
+                      <p>Featured Video</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- pages -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="openPages">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                    PAGES
+                  </button>
+                </h2>
+                <div id="pages" class="accordion-collapse collapse" aria-labelledby="openPages">
+                  <div class="accordion-body">
+                    <div class="wrapPage">
+                      <h6>PRE-BUILT PAGES</h6>
+                      <p>About us</p>
+                      <p>Contact us</p>
+                      <p>FWishlist</p>
+                    </div>
+                    <div class="wrapEcomerce">
+                      <h6>E-COMMERCE</h6>
+                      <p>Shop</p>
+                      <p>Cart</p>
+                      <p>My account</p>
+                      <p>Checkout</p>
+                    </div>
+                    <div class="wrapOtherPages">
+                      <h6>OTHER PAGES</h6>
+                      <p>404</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- blog -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="openBlog">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#blog" aria-expanded="false" aria-controls="blog">
+                    BLOG
+                  </button>
+                </h2>
+                <div id="blog" class="accordion-collapse collapse" aria-labelledby="openBlog">
+                  <div class="accordion-body">
+                    <div class="wrapBlog">
+                      <h6>LAYOUTS</h6>
+                      <p>No Sidebar</p>
+                      <p>Left Sidebar</p>
+                      <p>Right Sidebar</p>
+                      <p>Classic</p>
+                      <p>Grid</p>
+                    </div>
+                    <div class="wrapSinglePost">
+                      <h6>SINGLE POST</h6>
+                      <p>No Sidebar</p>
+                      <p>Left Sidebar</p>
+                      <p>Right Sidebar</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="nav__list--shop">
-              <div class="text">SHOP</div>
-              <button id="btnShop" data-bs-toggle="collapse" href="#shop"><i class="fa-solid fa-angle-right"></i></i></button> -->
-              <!-- collapse -->
-              <!-- <div class="collapse" id="shop">
-                <div class="card card-body">
-                  <div class="wrapShopLayouts">
-                    <h6>SHOP LAYOUTS</h6>
-                    <p>Pagination</p>
-                    <p>List View</p>
-                    <p>FullWidth Layout</p>
-                    <p>Sidebar Layout</p>
-                  </div>
-                  <div class="wrapFilterLayouts">
-                    <h6>FILTER LAYOUTS</h6>
-                    <p>Top Filter</p>
-                    <p>Drawer Filter</p>
-                    <p>Off Canvas Filter</p>
-                  </div>
-                  <div class="wrapProductLayouts">
-                    <h6>PRODUCT LAYOUT</h6>
-                    <p>Vertical Thumbnails</p>
-                    <p>Sticky Details</p>
-                    <p>Gallery Basic</p>
-                    <p>Slider Large</p>
-                  </div>
-                  <div class="wrapProductLayoutsTypes">
-                    <h6>PRODUCT TYPES</h6>
-                    <p>Simple</p>
-                    <p>Out of stock</p>
-                    <p>Variable Color</p>
-                    <p>External/Affiliate</p>
-                  </div>
-                  <div class="wrapProductExtends">
-                    <h6>PRODUCT EXTENDS</h6>
-                    <p>360 Degree</p>
-                    <p>Featured Video</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-           <div class="nav__list--pages">
-              <div class="text">PAGES</div>
-              <button id="btnPages" data-bs-toggle="collapse" href="#page"><i class="fa-solid fa-angle-right"></i></button> -->
-               <!-- collapse -->
-               <!-- <div class="collapse" id="page">
-                <div class="card card-body">
-                  <div class="wrapPage">
-                    <h6>PRE-BUILT PAGES</h6>
-                    <p>About us</p>
-                    <p>Contact us</p>
-                    <p>FWishlist</p>
-                  </div>
-                  <div class="wrapEcomerce">
-                    <h6>E-COMMERCE</h6>
-                    <p>Shop</p>
-                    <p>Cart</p>
-                    <p>My account</p>
-                    <p>Checkout</p>
-                  </div>
-                  <div class="wrapOtherPages">
-                    <h6>OTHER PAGES</h6>
-                    <p>404</p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="nav__list--blog">
-              <div class="text">BLOG</div>
-              <button id="btnBlog" data-bs-toggle="collapse" href="#blog"><i class="fa-solid fa-angle-right"></i></button> -->
-              <!-- collapse -->
-              <!-- <div class="collapse" id="blog">
-                <div class="card card-body">
-                  <div class="wrapBlog">
-                    <h6>LAYOUTS</h6>
-                    <p>No Sidebar</p>
-                    <p>Left Sidebar</p>
-                    <p>Right Sidebar</p>
-                    <p>Classic</p>
-                    <p>Grid</p>
-                  </div>
-                  <div class="wrapSinglePost">
-                    <h6>SINGLE POST</h6>
-                    <p>No Sidebar</p>
-                    <p>Left Sidebar</p>
-                    <p>Right Sidebar</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
           </div>
-        <!-- </div> -->
+          </div>
+       
       </div>
     </div>
 
@@ -301,7 +293,7 @@
   <!-- footer -->
   <footer class="container">
     <div class="row ">
-      <div class="col-4 footer__left">
+      <div class="col-12  col-lg-4 footer__left">
         <div class="row">
           <div class="col-4 hoverColor">
             about us
@@ -313,12 +305,11 @@
             subscription
           </div>
         </div>
-        
       </div>
-      <div class="col-4 footer__center">
+      <div class="col-12  col-lg-4 footer__center">
         <img src="../img/logo_den.png" alt="">
       </div>
-      <div class="col-4 footer__right">
+      <div class="col-12  col-lg-4 footer__right">
         <ul>
           <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
           <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
@@ -328,12 +319,19 @@
       </div>
     </div>
   </footer>
+
+  <hr>
+  <!-- Copyrights © 2020 ShopiLaunch. All rights reserved -->
+  <section class="copyrights">
+    <p>Copyrights © 2020 ShopiLaunch. All rights reserved.</p>
+  </section>
+
+  <iframe src='https://my.spline.design/molang3dcopy-423ff3994717e60d6ce01939fce1fa06/' frameborder='0' width='100%' height='100%'></iframe>
     
 
     <script type="module" src="../js/card.js"></script>
     <script type="module" src="../js/const.js"></script>
     <script type="module" src="./../js/index.js"></script>
-    
     <script src="./../js/main.js"></script>
     
   </body>

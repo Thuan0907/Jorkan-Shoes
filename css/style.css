@@ -4,58 +4,122 @@
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   padding: 20px;
 }
+
 nav .wrapNav {
   width: 100%;
 }
+
 nav .wrapNav .navLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
-  align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 nav .wrapNav .navLeft__list {
   font-size: 14px;
   color: #333;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
 nav .wrapNav .navLeft__list--icon a {
   cursor: pointer;
   color: black;
   text-decoration: none;
   font-size: 20px;
 }
+
 nav .wrapNav .navRight {
   padding: 0;
 }
+
 nav .wrapNav .navRight ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 0;
 }
-nav .wrapNav .navRight ul li {
+
+nav .wrapNav .navRight ul .navRightLarge {
   list-style: none;
   margin-left: 10px;
   border: 1px solid black;
   width: 50px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-nav .wrapNav .navRight ul li a {
+
+nav .wrapNav .navRight ul .navRightLarge a {
   color: black;
 }
-nav .wrapNav .navCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+nav .wrapNav .navRight ul .navRightSmall {
+  display: none;
 }
+
+nav .wrapNav .navCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 nav .wrapNav .navCenter a img {
   height: 20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scrollTop:hover {
+  background-color: #ddac55;
 }
 
 #navContent {
@@ -63,43 +127,73 @@ nav .wrapNav .navCenter a img {
   inset: 0;
   background-color: #fff;
   z-index: 1;
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 1s cubic-bezier(0.1, 1, 0.4, 1);
   transition: all 1s cubic-bezier(0.1, 1, 0.4, 1);
   overflow: hidden;
   background-image: url(./../img/bg-menu.jpg);
   background-size: cover;
   background-position: center;
 }
+
 #navContent.active {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
+
 #navContent .nav__list {
   padding: 80px 50px 80px 120px;
 }
+
 #navContent .nav__list .closeBtn {
+  font-size: 40px;
   background-color: transparent;
   outline: none;
   border: none;
   margin-bottom: 45px;
+  font-weight: 400;
 }
+
+#navContent .nav__list .closeBtn:hover {
+  color: #ddac55;
+}
+
 #navContent .nav__list--content {
   width: 40%;
   overflow-y: auto;
   overflow-x: hidden;
   height: calc(100vh - 200px) !important;
 }
+
 #navContent .nav__list--content .accordion-item {
   border: none !important;
   outline: none !important;
   background-color: transparent;
 }
+
 #navContent .nav__list--content .accordion-item .accordion-button {
   background-color: transparent;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 25px;
 }
+
 #navContent .nav__list--content .accordion-item .accordion-button:focus {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
+
+#navContent .nav__list--content .accordion-item .accordion-button:hover {
+  color: #ddac55;
+}
+
+#navContent .nav__list--content .accordion-item .accordion-button::after {
+  content: "";
+  -webkit-transition: height 1s ease 0s !important;
+  transition: height 1s ease 0s !important;
+}
+
 #navContent .nav__list--content .accordion-item .accordion-body ul {
   list-style: none;
   margin: 0;
@@ -109,24 +203,29 @@ nav .wrapNav .navCenter a img {
 .carousel {
   position: relative;
 }
+
 .carousel .detailPicture {
   position: absolute;
   right: 100px;
   bottom: 200px;
   text-align: center;
 }
+
 .carousel .detailPicture .carouselPicture {
   border-radius: 50%;
   overflow: hidden;
 }
+
 .carousel .detailPicture p {
   font-size: 50px;
-  color: rgb(85, 81, 81);
+  color: #555151;
   z-index: 1;
 }
+
 .carousel .detailPicture .collection {
   font-size: 30px;
 }
+
 .carousel .detailPicture .shopNow {
   font-weight: bold;
   font-size: 15px;
@@ -135,30 +234,41 @@ nav .wrapNav .navCenter a img {
 .photoModal {
   margin-top: 20px;
 }
+
 .photoModal #photoSneaker {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
+
 .photoModal #photoSneaker .photoSneaker {
   overflow: hidden;
   position: relative;
 }
+
 .photoModal #photoSneaker .photoSneaker img {
   width: 100%;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 .photoModal #photoSneaker .photoSneaker img:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
+
 .photoModal #photoSneaker .photoSneaker .contentDetail {
   position: absolute;
   top: 100px;
   right: 50px;
   z-index: 2;
 }
+
 .photoModal #photoSneaker .photoSneaker .contentDetail .sneaker {
   font-size: 30px;
 }
+
 .photoModal #photoSneaker .photoSneaker .contentDetail .shopNow {
   font-size: 10px;
   font-weight: bold;
@@ -168,76 +278,132 @@ nav .wrapNav .navCenter a img {
   text-align: center;
   margin-top: 20px;
 }
+
 .sneaker__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: bold;
 }
+
 .sneaker__title--men {
   margin-right: 20px;
+  letter-spacing: 1px;
 }
+
+.sneaker__title--men::after {
+  content: "";
+  height: 2px;
+  background-color: #ddac55;
+  display: block;
+}
+
 .sneaker__title--women {
   margin-left: 20px;
 }
+
+.sneaker__title--women:hover::after {
+  content: "";
+  height: 2px;
+  background-color: #ddac55;
+  display: block;
+  -webkit-transition: width 0.4s linear 0s !important;
+  transition: width 0.4s linear 0s !important;
+}
+
 .sneaker__products {
   margin-top: 20px;
 }
+
 .sneaker__products #sneakerDetail {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
+
 .sneaker__products #sneakerDetail > div {
   width: calc((100% - 90px) / 4);
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   position: relative;
 }
+
 .sneaker__products #sneakerDetail > div:hover .cardHoverIcon ul li {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
+
 .sneaker__products #sneakerDetail > div:hover .cardHoverIcon ul li:nth-child(1) {
-  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
+
 .sneaker__products #sneakerDetail > div:hover .cardHoverIcon ul li:nth-child(2) {
-  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
+
 .sneaker__products #sneakerDetail > div:hover .cardHoverIcon ul li:nth-child(3) {
-  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
+
 .sneaker__products #sneakerDetail > div p:hover {
   color: #ddac55;
   cursor: pointer;
 }
+
 .sneaker__products #sneakerDetail > div span {
   color: #ddac55;
 }
+
 .sneaker__products #sneakerDetail > div .cardHoverIcon {
   position: absolute;
   bottom: 90px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   left: 50%;
 }
+
 .sneaker__products #sneakerDetail > div .cardHoverIcon ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
+
 .sneaker__products #sneakerDetail > div .cardHoverIcon ul li {
   background-color: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.0784313725);
+  -webkit-box-shadow: 0 3px 10px #00000014;
+          box-shadow: 0 3px 10px #00000014;
   list-style: none;
   border-radius: 50px;
   width: 40px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 2;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 10px;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   opacity: 0;
 }
+
 .sneaker__products #sneakerDetail > div .cardHoverIcon ul li:hover {
   background-color: #ddac55;
   color: #fff;
@@ -250,28 +416,40 @@ nav .wrapNav .navCenter a img {
 .instagram {
   text-align: center;
   margin-top: 20px;
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
+
 .instagram__title {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 0.4em;
+  font-weight: 600;
+  font-style: normal;
 }
+
 .instagram #showInstagramTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .instagram #showInstagramTop > div {
   position: relative;
   overflow: hidden;
-  width: 25%;
-  aspect-ratio: 1/1;
+  width: calc(100% / 4);
+  aspect-ratio: 1 / 1;
 }
+
 .instagram #showInstagramTop > div:hover .list_photos {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
+
 .instagram #showInstagramTop > div:hover .backdrop {
   opacity: 1;
 }
+
 .instagram #showInstagramTop > div .backdrop {
   position: absolute;
   z-index: 2;
@@ -279,17 +457,23 @@ nav .wrapNav .navCenter a img {
   inset: 0;
   color: #fff;
   opacity: 0;
+  -webkit-transition: opacity 0.9s ease;
   transition: opacity 0.9s ease;
   font-size: 20px;
 }
+
 .instagram #showInstagramTop > div .backdrop .backdropWrap {
-  transform: translateX(50%);
-  transform: translateY(200%);
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
 }
+
 .instagram #showInstagramTop > div .list_photos {
   display: block;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   -o-object-fit: cover;
      object-fit: cover;
@@ -306,6 +490,7 @@ nav .wrapNav .navCenter a img {
   text-align: center;
   background-size: cover;
 }
+
 .information p {
   color: white;
   text-transform: uppercase;
@@ -313,6 +498,7 @@ nav .wrapNav .navCenter a img {
   margin: 20px;
   position: relative;
 }
+
 .information p::after {
   content: "";
   width: 10px;
@@ -322,14 +508,17 @@ nav .wrapNav .navCenter a img {
   right: 0;
   color: white;
 }
+
 .information span {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
 }
+
 .information .inputEmail {
   margin-top: 20px;
 }
+
 .information .inputEmail input {
   background-color: transparent;
   color: #fff;
@@ -337,6 +526,7 @@ nav .wrapNav .navCenter a img {
   border: none;
   outline: none;
 }
+
 .information .inputEmail button {
   background-color: transparent;
   color: #fff;
@@ -344,6 +534,7 @@ nav .wrapNav .navCenter a img {
   font-weight: bold;
   letter-spacing: 3px;
 }
+
 .information .inputEmail button:hover {
   color: #ddac55;
 }
@@ -351,22 +542,33 @@ nav .wrapNav .navCenter a img {
 footer {
   text-align: center;
 }
+
 footer .row {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
+
 footer .row .footer__left {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
 }
+
 footer .row .footer__left .row .hoverColor:hover {
   color: #ddac55;
 }
+
 footer .footer__right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 footer .footer__right ul li {
   list-style: none;
   margin: 0 5px;
@@ -375,31 +577,202 @@ footer .footer__right ul li {
   border-radius: 50px;
   width: 40px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
+
 footer .footer__right ul li::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
   background-color: #ddac55;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
+
 footer .footer__right ul li a {
   color: black;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   z-index: 1;
 }
+
 footer .footer__right ul li:hover {
   border: 1px solid #ddac55;
 }
+
 footer .footer__right ul li:hover::after {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
+
 footer .footer__right ul li:hover a {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.copyrights {
+  text-align: center;
+  font-size: 12px;
+  color: #979797;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1500px) {
+  .sneaker {
+    margin: 0 20px;
+  }
+  .instagram #showInstagramTop {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  .navRightLarge {
+    display: none !important;
+  }
+  .navRightSmall {
+    display: block !important;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .navRightSmall a {
+    color: black;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sneaker {
+    margin: 0 20px;
+  }
+  .sneaker__products #sneakerDetail {
+    gap: 20px;
+  }
+  .sneaker__products #sneakerDetail > div {
+    width: calc((100% - 40px) / 3);
+  }
+  .instagram #showInstagramTop {
+    margin: 0 20px;
+  }
+  .instagram #showInstagramTop > div {
+    width: calc(100% / 3);
+  }
+  .footer__center {
+    margin: 20px 0;
+  }
+  .footer__center img {
+    width: 15%;
+  }
+  .footer__right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .photoModal #photoSneaker {
+    gap: 0;
+    display: block;
+  }
+  .photoModal #photoSneaker .photoSneaker {
+    margin: 30px 20px;
+  }
+  .sneaker {
+    margin: 0 20px;
+  }
+  .sneaker__products #sneakerDetail > div {
+    width: calc((100% - 30px) / 2);
+  }
+  .instagram #showInstagramTop {
+    margin: 0 20px;
+  }
+  .instagram #showInstagramTop > div {
+    width: calc(100% / 3);
+  }
+  .footer__center {
+    margin: 20px 0;
+  }
+  .footer__center img {
+    width: 15%;
+  }
+  .footer__right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #navContent {
+    background-image: none;
+  }
+  .nav__list--content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sneaker {
+    margin: 0 20px;
+  }
+  .sneaker__products #sneakerDetail {
+    gap: 20px;
+  }
+  .sneaker__products #sneakerDetail > div {
+    width: calc((100% - 20px) / 2);
+  }
+  .instagram #showInstagramTop {
+    margin: 0 20px;
+  }
+  .instagram #showInstagramTop > div {
+    width: calc(100% / 2);
+  }
+  .footer__center {
+    margin: 20px 0;
+  }
+  .footer__center img {
+    width: 15%;
+  }
+  .footer__right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #navContent {
+    background-image: none;
+  }
+  .nav__list--content {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
