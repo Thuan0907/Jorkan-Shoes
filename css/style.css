@@ -13,6 +13,7 @@ nav {
 
 nav .wrapNav {
   width: 100%;
+  background-color: #fff;
 }
 
 nav .wrapNav .navLeft {
@@ -96,10 +97,40 @@ nav .wrapNav .navCenter a img {
   height: 20px;
 }
 
+#navBar {
+  background-color: #fff;
+}
+
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  -webkit-animation: down 0.4s linear;
+          animation: down 0.4s linear;
+}
+
+@-webkit-keyframes down {
+  from {
+    top: -100%;
+    opacity: 0;
+  }
+  to {
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes down {
+  from {
+    top: -100%;
+    opacity: 0;
+  }
+  to {
+    top: 0%;
+    opacity: 1;
+  }
 }
 
 #scrollTop {
@@ -207,8 +238,13 @@ nav .wrapNav .navCenter a img {
 .carousel .detailPicture {
   position: absolute;
   right: 100px;
-  bottom: 200px;
+  top: 50px;
   text-align: center;
+  width: 30%;
+}
+
+.carousel .detailPicture img {
+  width: 100%;
 }
 
 .carousel .detailPicture .carouselPicture {
@@ -263,6 +299,7 @@ nav .wrapNav .navCenter a img {
   top: 100px;
   right: 50px;
   z-index: 2;
+  text-align: right;
 }
 
 .photoModal #photoSneaker .photoSneaker .contentDetail .sneaker {
@@ -272,6 +309,7 @@ nav .wrapNav .navCenter a img {
 .photoModal #photoSneaker .photoSneaker .contentDetail .shopNow {
   font-size: 10px;
   font-weight: bold;
+  margin: 0 20px;
 }
 
 .sneaker {
@@ -688,9 +726,20 @@ footer .footer__right ul li:hover a {
         -ms-flex-align: center;
             align-items: center;
   }
+  .carousel .detailPicture {
+    width: 25% !important;
+    top: 35px !important;
+    right: 130px;
+  }
+  .carousel p {
+    font-size: 35px !important;
+  }
+  .carousel .collection {
+    font-size: 15px !important;
+  }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
   .photoModal #photoSneaker {
     gap: 0;
     display: block;
@@ -729,9 +778,23 @@ footer .footer__right ul li:hover a {
   }
   #navContent {
     background-image: none;
+    z-index: 99;
   }
-  .nav__list--content {
+  #navContent .nav__list--content {
     width: 80%;
+  }
+  .detailPicture p {
+    font-size: 10px;
+  }
+  .photoModal #photoSneaker .photoSneaker .contentDetail {
+    top: 70px;
+    right: 5px;
+  }
+  .photoModal #photoSneaker .photoSneaker .contentDetail .sneaker {
+    font-size: 45px;
+  }
+  .photoModal #photoSneaker .photoSneaker .contentDetail .shopNow {
+    font-size: 20px;
   }
 }
 
@@ -770,9 +833,30 @@ footer .footer__right ul li:hover a {
   }
   #navContent {
     background-image: none;
+    z-index: 99;
   }
-  .nav__list--content {
+  #navContent .nav__list--content {
     width: 80%;
+  }
+  .photoModal #photoSneaker .photoSneaker .contentDetail {
+    top: 70px;
+    right: 5px;
+  }
+  .photoModal #photoSneaker .photoSneaker .contentDetail .sneaker {
+    font-size: 20px;
+  }
+  .photoModal #photoSneaker .photoSneaker .contentDetail .shopNow {
+    font-size: 10px;
+  }
+  .carousel .detailPicture {
+    width: 25% !important;
+    top: 20px !important;
+  }
+  .carousel p {
+    font-size: 25px !important;
+  }
+  .carousel .collection {
+    font-size: 15px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

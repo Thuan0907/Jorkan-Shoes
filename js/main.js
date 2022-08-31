@@ -13,20 +13,20 @@ function closePanel() {
   document.body.style.overflow = "auto";
 }
 
-// window.onscroll = function () {
-//   myFunction();
-// };
+window.onscroll = function () {
+  myFunction();
+};
 
-// var wrapNav = document.getElementsByClassName("wrapNav");
-// var sticky = wrapNav.offsetTop;
+var wrapNav = document.querySelector("#navBar");
+var sticky = wrapNav.offsetTop;
 
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//     wrapNav.classList.add("sticky");
-//   } else {
-//     wrapNav.classList.remove("sticky");
-//   }
-// }
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    wrapNav.classList.add("sticky");
+  } else {
+    wrapNav.classList.remove("sticky");
+  }
+}
 
 // var mybutton = document.getElementById("scrollTop");
 // window.onscroll = function () {
