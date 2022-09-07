@@ -299,7 +299,9 @@ nav {
         width: calc((100% - 90px) / 4);
         aspect-ratio: 1 / 1;
         position: relative;
-
+        .list_image {
+          width: 100%;
+        }
         &:hover {
           & .cardHoverIcon {
             & ul {
@@ -370,10 +372,6 @@ nav {
       }
     }
   }
-}
-
-.list_image {
-  width: 100%;
 }
 
 .instagram {

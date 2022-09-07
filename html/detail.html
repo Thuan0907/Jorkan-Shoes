@@ -1,249 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <!-- bootstap -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
-      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../css/detail.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Detail</title>
-  </head>
-  <body>
-     <!-- nav -->
-     <nav id="navBar">
-        <div class="row wrapNav">
-            <div class="col-4 center navLeft">
-                <div class="navLeft__list">
-                    <div class="navLeft__list--icon"> 
-                        <a onclick="showNavContent()">
-                            <i class="fa-solid fa-bars"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 center navCenter"> 
-                <ul>
-                    <li> <a href="">HOME</a></li>
-                    <li> <a href="">SHOP</a></li>
-                    <li> <a href="">PAGES</a></li>
-                    <li> <a href="">BLOG</a></li>
-                </ul>
-            </div>
-            <div class="col-4 navRight">
-              <ul>
-                <li class="navRightLarge"> <a href=""><i class="fa-solid fa-magnifying-glass"></i> </a> </li>
-                <li class="navRightLarge"> <a href=""><i class="fa-regular fa-user"></i></a> </li>
-                <li class="navRightLarge"> <a href=""><i class="fa-solid fa-bag-shopping"></i></a> </li>
-                <li class="navRightSmall"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> </li>
-                <li class="navRightSmall"> <a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
-              </ul>
-            </div>
+  <!-- bootstap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+    integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/detail.css" />
+
+  <title>Detail</title>
+</head>
+
+<body>
+  <!-- nav -->
+  <nav id="navBar">
+    <div class="row wrapNav">
+      <div class="col-4 center navLeft">
+        <div class="navLeft__list">
+          <div class="navLeft__list--icon">
+            <a onclick="showNavContent()">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </nav>
-
-    <!-- content -->
-    <section id="content">
-        <div class="row containerCustom">
-            <div class="col-6 wrap__breadCrumb--left"  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item breadCrumb"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item strong1 active" aria-current="">Daniel Wellington</li>
-                </ol>
-            </div>
-            <div class="col-6 wrap__breadCrumb--right">
-                <div class="arrows-product">
-                    <div class="prev_prod">
-                        <a href=""><i class="fa-solid fa-angle-left"></i>
-                          <span>PREV</span> 
-                        </a>
-                    </div>
-                    <div class="next_prod">
-                        <a href=""> <span>NEXT</span> 
-                          <i class="fa-solid fa-angle-right"></i> 
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row containerCustom">
-          <div class="col-5">
-            <div class="row">
-              <div class="col-2 photoProductSmall">
-                <img src="../img/product1.jpg" alt="">
-                
-                <img src="../img/product2.jpg" alt="">
-              </div>
-              <div class="col-10 photoProductLarge">
-                <img src="../img/product1.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="productContent">
-              <div class="productTitle">
-                <h2>Daniel Wellington</h2>
-              </div>
-              <div class="productPrice">
-                <del>$300.00 USD</del>
-                <span>$200.00 USD</span>
-              </div>
-              <div class="iconStar">
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>No review</span>
-              </div>
-              <hr>
-              <button>OUT OF STOCK</button>
-              <div class="categories">
-                <label for="">Categories</label>
-                <a href="">New</a>
-              </div>
-              <div class="iconHeart">
-                <i class="fa-regular fa-heart"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="box">
-              <h3>why Jokan ?</h3>
-              <div class="box__text">
-                Official Herschel stockist Australian warranty assistance & support Australian shipping & returns.
-                Customer first experienceEnvironmentally focused
-              </div>
-            </div>
-            <div class="box">
-              <h3>Returns</h3>
-              <div class="box__text">
-                Return this product within 100 days if you change your mind. 
-                Get a refund/replacement & free return shipping if it arrives damaged or not as described.
-              </div>
-            </div>
-            <div class="box">
-              <h3>Shipping</h3>
-              <div class="box__text">
-                Free if stated near price. $9.95 Australia wide (up to 10 items). 
-                $18.95 for Express Post (generally 1 business day).
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- tab product -->
-    <section id="tab__product" class="containerCustom">
-      <hr>
-      <div class="tab__product--title">
+      <div class="col-4 center navCenter">
         <ul>
-          <li> <a href="">DESCRIPTION</a></li>
-          <li> <a href="">ADDITIONAL INFORMATION</a></li>
-          <li> <a href="">REVIEW</a></li>
+          <li class="navHome"> 
+            <a href="">HOME</a>
+            <div id="homeHover"></div>
+          </li>
+          <li> <a href="">SHOP</a></li>
+          <li> <a href="">PAGES</a></li>
+          <li> <a href="">BLOG</a></li>
         </ul>
       </div>
-      <hr>
-      <div class="tab__product--content">
-        <div class="row wrap__content">
-          <div class="col-6 product__left">
-            <p class="product__left--top">
-              Classic design meets modern minimalism. Petite Bondi is this
-            </p> 
-            <p class="product__left--bottom">
-              Petite Bondi is this season's 1 essential wardrobe. This ultra-thin watch rests delicately 
-              on the arm and features a fresh white leather strap and a black dial and details in rose gold.
-            </p>
-           
+      <div class="col-4 navRight">
+        <ul>
+          <li class="navRightLarge"> <a href=""><i class="fa-solid fa-magnifying-glass"></i> </a> </li>
+          <li class="navRightLarge"> <a href=""><i class="fa-regular fa-user"></i></a> </li>
+          <li class="navRightLarge"> <a href=""><i class="fa-solid fa-bag-shopping"></i></a> </li>
+          <li class="navRightSmall"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> </li>
+          <li class="navRightSmall"> <a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <!-- content -->
+  <section id="content">
+    <div class="row containerCustom">
+      <div class="col-6 wrap__breadCrumb--left"
+        style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+        aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item breadCrumb"><a href="#">Home</a></li>
+          <li class="breadcrumb-item strong1 active" aria-current="">Daniel Wellington</li>
+        </ol>
+      </div>
+      <div class="col-6 wrap__breadCrumb--right">
+        <div class="arrows-product">
+          <div class="prev_prod">
+            <a href=""><i class="fa-solid fa-angle-left"></i>
+              <span>PREV</span>
+            </a>
           </div>
-          <div class="col-6 product__right">
-            Inventory unitDW00100285
-            Thickness6mm
-            FaceBlack
-            Machine structureJapanese Quartz Movement
-            Wire width12mm
-            Length adjustable145-185mm
-            Wirestrands
-            ColorWhite
-            Replacement clocks are available
-            Water ResistantMinimum 3ATM (rain waterproof)
+          <div class="next_prod">
+            <a href=""> <span>NEXT</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
           </div>
         </div>
       </div>
-      <hr>
-    </section>
+    </div>
+    <div class="row containerCustom">
+      <div class="col-5">
+        <div class="row">
+          <div class="col-2 photoProductSmall">
+            <img src="../img/product1.jpg" alt="">
 
-    <!-- LATEST PRODUCTS -->
-    <section id="latest__product" class="containerCustom">
-      <div class="latest__product--title">
-        LATEST PRODUCTS
+            <img src="../img/product2.jpg" alt="">
+          </div>
+          <div class="col-10 photoProductLarge">
+            <img src="../img/product1.jpg" alt="">
+          </div>
+        </div>
       </div>
-      <div class="sneaker__products">
-        <div id="sneakerDetail"></div>
+      <div class="col-4">
+        <div class="productContent">
+          <div class="productTitle">
+            <h2>Daniel Wellington</h2>
+          </div>
+          <div class="productPrice">
+            <del>$300.00 USD</del>
+            <span>$200.00 USD</span>
+          </div>
+          <div class="iconStar">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>No review</span>
+          </div>
+          <hr>
+          <button>OUT OF STOCK</button>
+          <div class="categories">
+            <label for="">Categories</label>
+            <a href="">New</a>
+          </div>
+          <div class="iconHeart">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="col-3">
+        <div class="box">
+          <h3>why Jokan ?</h3>
+          <div class="box__text">
+            Official Herschel stockist Australian warranty assistance & support Australian shipping & returns.
+            Customer first experienceEnvironmentally focused
+          </div>
+        </div>
+        <div class="box">
+          <h3>Returns</h3>
+          <div class="box__text">
+            Return this product within 100 days if you change your mind.
+            Get a refund/replacement & free return shipping if it arrives damaged or not as described.
+          </div>
+        </div>
+        <div class="box">
+          <h3>Shipping</h3>
+          <div class="box__text">
+            Free if stated near price. $9.95 Australia wide (up to 10 items).
+            $18.95 for Express Post (generally 1 business day).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- tab product -->
+  <section id="tab__product" class="containerCustom">
     <hr>
+    <div class="tab__product--title">
+      <ul>
+        <li> <a href="">DESCRIPTION</a></li>
+        <li> <a href="">ADDITIONAL INFORMATION</a></li>
+        <li> <a href="">REVIEW</a></li>
+      </ul>
+    </div>
+    <hr>
+    <div class="tab__product--content">
+      <div class="row wrap__content">
+        <div class="col-6 product__left">
+          <p class="product__left--top">
+            Classic design meets modern minimalism. Petite Bondi is this
+          </p>
+          <p class="product__left--bottom">
+            Petite Bondi is this season's 1 essential wardrobe. This ultra-thin watch rests delicately
+            on the arm and features a fresh white leather strap and a black dial and details in rose gold.
+          </p>
 
-     <!-- footer -->
-    <footer class="container">
-      <div class="row ">
-        <div class="col-12  col-lg-4 footer__left">
-          <div class="row">
-            <div class="col-4 hoverColor">
-              about us
-            </div>
-            <div class="col-4 hoverColor">
-              customer service
-            </div>
-            <div class="col-4 hoverColor">
-              subscription
-            </div>
-          </div>
         </div>
-        <div class="col-12  col-lg-4 footer__center">
-          <img src="../img/logo_den.png" alt="">
-        </div>
-        <div class="col-12  col-lg-4 footer__right">
-          <ul>
-            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
-            <li><a href=""> <i class="fa-brands fa-behance"></i></a></li>
-            <li> <a href=""><i class="fa-brands fa-instagram"></i></a></li>
-          </ul>
+        <div class="col-6 product__right">
+          Inventory unitDW00100285
+          Thickness6mm
+          FaceBlack
+          Machine structureJapanese Quartz Movement
+          Wire width12mm
+          Length adjustable145-185mm
+          Wirestrands
+          ColorWhite
+          Replacement clocks are available
+          Water ResistantMinimum 3ATM (rain waterproof)
         </div>
       </div>
-    </footer>
+    </div>
+    <hr>
+  </section>
+
+  <!-- LATEST PRODUCTS -->
+  <section id="latest__product" class="containerCustom">
+    <div class="latest__product--title">
+      LATEST PRODUCTS
+    </div>
+    <div class="sneaker__products">
+      <div id="sneakerDetail"></div>
+    </div>
+  </section>
+  <hr>
+
+  <!-- footer -->
+  <footer class="container">
+    <div class="row ">
+      <div class="col-12  col-lg-4 footer__left">
+        <div class="row">
+          <div class="col-4 hoverColor">
+            about us
+          </div>
+          <div class="col-4 hoverColor">
+            customer service
+          </div>
+          <div class="col-4 hoverColor">
+            subscription
+          </div>
+        </div>
+      </div>
+      <div class="col-12  col-lg-4 footer__center">
+        <img src="../img/logo_den.png" alt="">
+      </div>
+      <div class="col-12  col-lg-4 footer__right">
+        <ul>
+          <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
+          <li><a href=""> <i class="fa-brands fa-behance"></i></a></li>
+          <li> <a href=""><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <hr>
   <!-- Copyrights © 2020 ShopiLaunch. All rights reserved -->
@@ -251,9 +243,13 @@
     <p>Copyrights © 2020 ShopiLaunch. All rights reserved</p>
   </section>
 
+  <iframe src='https://my.spline.design/molang3dcopy-423ff3994717e60d6ce01939fce1fa06/' frameborder='0' width='100%'
+    height='100%'></iframe>
 
-    <script type="module" src="../js/detailHTML.js"></script>
-    <script type="module" src="../js/detailData.js"></script>
-    <script type="module" src="../js/indexDetail.js"></script>
-  </body>
+
+  <script type="module" src="../js/detailHTML.js"></script>
+  <script type="module" src="../js/detailData.js"></script>
+  <script type="module" src="../js/indexDetail.js"></script>
+</body>
+
 </html>

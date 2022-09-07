@@ -371,6 +371,10 @@ nav .wrapNav .navCenter a img {
   position: relative;
 }
 
+.sneaker__products #sneakerDetail > div .list_image {
+  width: 100%;
+}
+
 .sneaker__products #sneakerDetail > div:hover .cardHoverIcon ul li {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -445,10 +449,6 @@ nav .wrapNav .navCenter a img {
 .sneaker__products #sneakerDetail > div .cardHoverIcon ul li:hover {
   background-color: #ddac55;
   color: #fff;
-}
-
-.list_image {
-  width: 100%;
 }
 
 .instagram {

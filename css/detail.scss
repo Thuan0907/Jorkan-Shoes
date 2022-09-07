@@ -73,12 +73,37 @@ nav {
         li {
           list-style: none;
           margin-left: 20px;
+          position: relative;
+          &:hover {
+            & #homeHover {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
           a {
             text-decoration: none;
             color: #000000;
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 2px;
+          }
+          #homeHover {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.9s;
+            .hoverHomePhoto {
+              width: calc((100%) / 5);
+              h5 {
+                font-size: 12px;
+                margin-top: 20px;
+              }
+            }
           }
         }
       }
@@ -262,6 +287,7 @@ nav {
     ul {
       display: flex;
       list-style: none;
+      padding: 0;
       li {
         a {
           text-decoration: none;
@@ -316,6 +342,90 @@ nav {
       background-color: #ff4949;
       left: 0;
       bottom: -5px;
+    }
+  }
+  .sneaker__products {
+    margin-top: 20px;
+    #sneakerDetail {
+      flex-wrap: wrap;
+      display: flex;
+      gap: 30px;
+
+      & > div {
+        width: calc((100% - 90px) / 4);
+        aspect-ratio: 1 / 1;
+        position: relative;
+        .list_image {
+          width: 100%;
+        }
+        &:hover {
+          & .cardHoverIcon {
+            & ul {
+              li {
+                transform: translateY(0);
+                opacity: 1;
+
+                &:nth-child(1) {
+                  transition-delay: 0.1s;
+                }
+
+                &:nth-child(2) {
+                  transition-delay: 0.2s;
+                }
+
+                &:nth-child(3) {
+                  transition-delay: 0.3s;
+                }
+              }
+            }
+          }
+        }
+
+        p {
+          &:hover {
+            color: #ddac55;
+            cursor: pointer;
+          }
+        }
+
+        span {
+          color: #ddac55;
+        }
+
+        .cardHoverIcon {
+          position: absolute;
+          bottom: 90px;
+          transform: translateX(-50%);
+          left: 50%;
+
+          ul {
+            display: flex;
+            margin: 0;
+
+            li {
+              background-color: #fff;
+              box-shadow: 0 3px 10px #00000014;
+              list-style: none;
+              border-radius: 50px;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              z-index: 2;
+              justify-content: center;
+              align-items: center;
+              margin: 0 10px;
+              transition: all 0.5s;
+              transform: translateY(30px);
+              opacity: 0;
+
+              &:hover {
+                background-color: #ddac55;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

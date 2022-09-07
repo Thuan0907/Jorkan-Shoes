@@ -22,3 +22,26 @@ export const photoProduct = [
     price: "$150.00",
   },
 ];
+
+export const homePhoto = [
+  {
+    image: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/home1.jpg?v=1570186294",
+    title: "HOME 01",
+  },
+  {
+    image: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/home2.jpg?v=1570186294",
+    title: "HOME 02",
+  },
+  {
+    image: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/home3.jpg?v=1570186294",
+    title: "HOME 03",
+  },
+  {
+    image: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/home4.jpg?v=1570186294",
+    title: "HOME 04",
+  },
+  {
+    image: "https://cdn.shopify.com/s/files/1/0267/0211/8947/files/home5.jpg?v=1570186294",
+    title: "HOME 05",
+  },
+];
